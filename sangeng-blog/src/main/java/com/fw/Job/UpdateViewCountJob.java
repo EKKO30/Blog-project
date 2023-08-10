@@ -27,9 +27,7 @@ public class UpdateViewCountJob {
         for (Map.Entry<String, Integer> entry : articleViewCount.entrySet()) {
             String key = entry.getKey();
             Integer value = entry.getValue();
-            // 在这里进行处理，例如打印键值对
-            Article article = new Article(Long.valueOf(key), value.longValue());
-            articleMapper.updateById(article);
+            articleMapper.UpdateV(Long.valueOf(key),Long.valueOf(value.longValue()));
             System.out.println("Key: " + key + ", Value: " + value);
         }
     }
